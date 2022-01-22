@@ -6,6 +6,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/tdesign-vue-next/dist/tdesign.min.css" />
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
@@ -18,5 +19,15 @@
 <script src="https://unpkg.com/vue@next"></script>
 <script src="https://unpkg.com/vue-router@4"></script>
 <script src="https://unpkg.com/vuex@4"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script src="https://unpkg.com/tdesign-vue-next/dist/tdesign.min.js"></script>
+<script>
+    // console.log(TDesign)
+    axios.defaults.timeout = 5000;
+    axios.defaults.baseURL = "/api";
+    axios.defaults.withCredentials = true;
+</script>
+
 </body>
 </html>
